@@ -1,5 +1,6 @@
 let nome = prompt("inserisci il tuo nome");
-let list = ["Aldo", "Giovanni", "Giacomo"];
+let cognome = prompt("inserisci il tuo cognome")
+let list = ["Aldo Baglio", "Giovanni Storti", "Giacomo Poretti"];
 let sentinella = false;
 let container = document.getElementById("container");
 
@@ -16,8 +17,12 @@ if (sentinella == true) {
     container.innerHTML = `Il tuo nome non è in lista`;
 }*/
 
-if (list.includes(nome)) {
-    container.innerHTML = `Benvenuto ${nome}`;
+if (isNaN(nome) && isNaN(cognome)) {
+    if (list.includes(nome + " " + cognome)) {
+        container.innerHTML = `Il nominativo ${nome} ${cognome} è nela lista`;
+    } else {
+        container.innerHTML = `Il tuo nominativo non è in lista`;
+    }
 } else {
-    container.innerHTML = `Il tuo nome non è in lista`;
+    alert("ERRORE, ricaricare la pagina e inserire correttamente i dati.")
 }
