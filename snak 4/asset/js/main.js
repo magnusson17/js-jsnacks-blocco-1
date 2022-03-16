@@ -3,6 +3,7 @@ let list = ["Aldo", "Giovanni", "Giacomo"];
 let sentinella = false;
 let container = document.getElementById("container");
 
+//metodo alternativo
 /*for (i = 0; i < list.length; i++) {
     if (nome == list[i]) {
         sentinella = true;
